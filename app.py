@@ -25,8 +25,9 @@ if st.button("🚀 اطلق خط الإنتاج وصنع التطبيق الآن
         prompt = f"You are an expert Android Developer. Generate a fully working Android App based on this idea: {user_idea}. Return ONLY the valid Java source code for MainActivity.java inside a markdown block, no explanations."
         
         data = {
-            "model": "llama3-70b-8192",
+            "model": "llama-3.3-70b-versatile",
             "messages": [{"role": "user", "content": prompt}]
+        }
         }
         
         response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data)
